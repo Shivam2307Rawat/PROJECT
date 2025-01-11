@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEHU Attendance Tracker</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #003366; /* Dark blue background */
+            background-image: url('GEHU-Dehradun-1abd6f9c.jpg'); /* Replace with your image path */
+            background-size: 615px auto; /* Adjust the background image size */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents repeating */
+            height: 100vh; /* Ensures the body fills the viewport height */
+            display: flex;
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            flex-direction: column; /* Stacks items vertically */
+        }
+
+        html {
+            height: 100%; /* Ensures full height for the HTML container */
+        }
+
+        .start-button {
+            background-color: #ADD8E6; /* Light blue background */
+            color: black; /* Black text color */
+            padding: 10px 20px; /* Adjusted padding for a better button size */
+            font-size: 16px; /* Increased font size */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-button:hover {
+            background-color: #87CEEB; /* Lighter blue when hovered */
+        }
+
+        p {
+            font-size: 24px; /* Larger font size for the paragraph */
+            color: black; /* White text color for better visibility */
+            text-align: bottom; /* Centers the text */
+            margin-top: 100px; /* Adds spacing between the paragraph and the button */
+        }
+
+        /* Link inside the button */
+        .start-button a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="start-button">
+        <a href="qr-code.html">Start</a> <!-- Correctly wrapped the link here -->
+    </button>
+    <p>Graphic Era Hill University Attendance Tracker</p>
+</body>
+</html>

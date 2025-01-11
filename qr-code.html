@@ -1,0 +1,64 @@
+<!-- QR Code Generator -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic QR Code Generator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .qr-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        .qr-container h2 {
+            font-size: 18px;
+            color: #003366;
+            margin-bottom: 15px;
+        }
+
+        #qr-code {
+            border: 2px solid #003366;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="qr-container">
+        <h2>Scan to Visit the Attendance Form</h2>
+        <canvas id="qr-code"></canvas>
+    </div>
+
+    <script>
+        const targetUrl = "form.html"; // URL of the Attendance Form
+        const qrCanvas = document.getElementById('qr-code');
+
+        function generateQRCode() {
+            QRCode.toCanvas(
+                qrCanvas,
+                targetUrl,
+                { width: 150 },
+                function (error) {
+                    if (error) console.error("QR Code Error:", error);
+                }
+            );
+        }
+
+        generateQRCode();
+    </script>
+</body>
+</html>
